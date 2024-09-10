@@ -43,6 +43,10 @@
         <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
     </div>
 
+  <div class="menu-content" id="menuContent">
+        <button class="login-btn" onclick="writeUserData(1 )">Login</button>
+    </div>
+
     <div class="profile" id="profile"></div>
 
     <section class="faq">
@@ -105,5 +109,39 @@
             answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
         }
     </script>
+
+        
+<script>
+    import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+import { ref, set } from "firebase/database";
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
+const firebaseConfig = {
+  // ...
+  // The value of `databaseURL` depends on the location of the database
+  databaseURL: "https://console.firebase.google.com/u/0/project/resume-builder-351fe/database/resume-builder-351fe-default-rtdb/data/~2F",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+// Initialize Realtime Database and get a reference to the service
+const database = getDatabase(app);
+
+
+
+function writeUserData(userId) {
+  const db = getDatabase();
+  set(ref(db, 'users/' + userId), {
+    username: "name",
+    
+   
+  });
+}
+</script>
+    
 </body>
 </html>
