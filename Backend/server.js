@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
-const uri = "mongodb+srv://nhnihal100200:HQgvsP4dSTaaK1Bx@cluster0.7sals.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://juhayerislam213:StNUv78AgsiNJNDZ@cluster0.jbg2e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const app = express();
 app.use(cors());
@@ -36,15 +36,15 @@ app.post('/api/register', async (req, res) => {
     const { firstName, lastName, email, password } = req.body;
 
     // Check if the user already exists
-    let user = await User.findOne({ email });
-    if (user) return res.status(400).send('User already exists');
+    //let user = await User.findOne({ email });
+    //if (user) return res.status(400).send('User already exists');
 
     // Hash the password before storing
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // Create a new user
-    user = new User({
+    let user = new User({
         firstName,
         lastName,
         email,
@@ -56,5 +56,5 @@ app.post('/api/register', async (req, res) => {
 });
 
 // Start the server
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
