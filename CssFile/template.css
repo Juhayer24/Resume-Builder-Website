@@ -1,0 +1,34 @@
+/* Template Page Styles */
+.template-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.template-box {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.template-box img {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.template-box button {
+    background: #3e3f46;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.template-box button:hover {
+    background: #084cdf;
+}
