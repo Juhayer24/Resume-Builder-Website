@@ -28,7 +28,16 @@ function registerUser() {
 }
 
 
+
 //For the template page images.
+function toggleMenu() {
+    var navMenu = document.getElementById('navMenu');
+    if (navMenu.style.display === 'block') {
+        navMenu.style.display = 'none';
+    } else {
+        navMenu.style.display = 'block';
+    }
+}
 
 // Function to open the modal and display the clicked image
 function openModal(imgElement) {
