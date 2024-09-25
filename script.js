@@ -26,3 +26,23 @@ function registerUser() {
         alert('Signup failed!');
     });
 }
+
+
+//For the template page images.
+
+// Function to open the modal and display the clicked image
+// Function to open the modal and display the clicked image
+function openModal(imgElement) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImg");
+    
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+}
+
+// Function to close the modal
+function closeModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+}
+// Ends here for the template page.

@@ -1,4 +1,53 @@
-/* Template Page Styles */
+/* Global Styles */
+body {
+    background-color: #000;
+    color: #ccc;
+    font-family: 'Georgia', sans-serif;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Georgia', sans-serif;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    font-family: 'Georgia', sans-serif;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #aaa;
+    font-family: 'Georgia', sans-serif;
+}
+
+/* Home Button Styles */
+.home-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    font-family: 'Georgia', sans-serif;
+}
+
+.home-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Template Container Styles */
 .template-container {
     display: flex;
     justify-content: center;
@@ -7,10 +56,16 @@
 }
 
 .template-box {
-    background: #333;
+    background: #444;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.template-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .template-box img {
@@ -18,17 +73,82 @@
     height: 250px;
     border-radius: 10px;
     margin-bottom: 10px;
-}
-
-.template-box button {
-    background: #3e3f46;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
     cursor: pointer;
 }
 
+/* Button Styles for Template Selection */
+.template-box button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Georgia', sans-serif;
+}
+
 .template-box button:hover {
-    background: #084cdf;
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100; /* Sit on top */
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%; /* Make the image occupy 90% of the viewport width */
+    max-width: 1000px; /* Maximum width for larger screens */
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain; /* Maintain the aspect ratio of the image */
+}
+
+.modal-content {
+    animation: zoom 0.6s; /* Zoom animation for smooth opening */
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Caption Styles (optional) */
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: 'Georgia', sans-serif;
 }
