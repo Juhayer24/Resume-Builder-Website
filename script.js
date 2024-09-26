@@ -32,10 +32,12 @@ function registerUser() {
 //For the template page images.
 function toggleMenu() {
     var navMenu = document.getElementById('navMenu');
-    if (navMenu.style.display === 'block') {
-        navMenu.style.display = 'none';
+    
+    // Add or remove the 'show' class to toggle visibility and opacity
+    if (navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
     } else {
-        navMenu.style.display = 'block';
+        navMenu.classList.add('show');
     }
 }
 

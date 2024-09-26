@@ -41,16 +41,19 @@ header p {
 
 /* Navigation Menu Styles */
 .nav-menu {
-    display: none;
+    display: none; /* Set initial display */
     position: absolute;
-    top: 60px; /* Adjust the top positioning relative to the hamburger menu */
-    left: 20px;
+    top: 60px;
+    right: 20px;
     background-color: #444;
     border-radius: 5px;
     padding: 10px;
-    width: 100px; /* Adjust width for the button */
-}
+    width: 100px;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
 
+}
 /* Home Button Styles */
 .nav-menu button {
     width: 100%;
@@ -63,6 +66,14 @@ header p {
     font-family: 'Georgia', sans-serif;
 }
 
+
+
+/* Show menu */
+.nav-menu.show {
+    display: block; /* Show when toggled */
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fade in */
+}
 .nav-menu button:hover {
     background-color: #0056b3;
 }

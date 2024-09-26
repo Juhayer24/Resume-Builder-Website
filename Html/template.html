@@ -36,6 +36,18 @@
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Ensure the path is correct -->
+    <script src="../js/script.js"></script> <!-- Ensure the path is correct -->
 </body>
 </html>
+<script>
+    function toggleMenu() {
+        var navMenu = document.getElementById('navMenu');
+        
+        // Add or remove the 'show' class to toggle visibility and opacity
+        if (navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+        } else {
+            navMenu.classList.add('show');
+        }
+    }
+</script>
