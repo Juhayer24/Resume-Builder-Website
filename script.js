@@ -51,6 +51,7 @@ function openModal(imgElement) {
     modalImg.alt = imgElement.alt;
 }
 
+
 // Function to close the modal
 function closeModal() {
     var modal = document.getElementById("imageModal");
