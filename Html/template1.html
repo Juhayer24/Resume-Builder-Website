@@ -10,8 +10,22 @@
     <header>
         <div class="container">
             <h1>Template 1 - Create Your Resume</h1>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Hidden Navigation Menu with Home and Select Template Buttons -->
+            <nav id="navMenu" class="nav-menu">
+                <button onclick="window.location.href='home.html'">Home</button>
+                <button onclick="window.location.href='template-page.html'">Select Template</button>
+            </nav>
         </div>
     </header>
+
     <div class="resume-form-container">
         <form id="resumeForm">
             <label for="fullName">Full Name:</label>
@@ -41,8 +55,20 @@
             <button type="submit" class="animate-button">Generate Resume</button>
         </form>
     </div>
-    <button class="home-btn" onclick="window.location.href='home.html'">Home</button>
-    <script src="script.js"></script>
+    
+    <script src="../js/script.js"></script>
 </body>
 </html>
 
+<script>
+    function toggleMenu() {
+        var navMenu = document.getElementById('navMenu');
+        
+        // Toggle visibility and opacity
+        if (navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+        } else {
+            navMenu.classList.add('show');
+        }
+    }
+</script>
