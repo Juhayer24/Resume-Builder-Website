@@ -88,6 +88,7 @@ header h1 {
     color: #fff;
 }
 
+/* Input and Textarea Styles */
 .resume-form-container input, 
 .resume-form-container textarea {
     width: 100%;
@@ -95,10 +96,11 @@ header h1 {
     margin-bottom: 20px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #222;
-    color: #fff;
+    background-color: #222; /* Dark background for input fields */
+    color: #fff; /* White text in input fields */
 }
 
+/* Generate Resume Button Styles */
 .resume-form-container button.animate-button {
     background-color: #007bff;
     color: white;
@@ -108,9 +110,13 @@ header h1 {
     cursor: pointer;
     font-size: 1.2em;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block; /* Ensure the button is block-level */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px; /* Maintain some margin on top */
 }
 
+/* Hover Effect */
 .resume-form-container button.animate-button:hover {
     background-color: #0056b3;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Animate on hover */
 }

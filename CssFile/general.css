@@ -16,12 +16,13 @@ body {
 /* Header Styles */
 header {
     padding: 50px 0;
+    
 }
 
 header h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Georgia', sans-serif;
 }
 
 header p {
