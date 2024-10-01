@@ -21,9 +21,10 @@ header {
 
 header h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin: 0;            /* Remove extra margin around the heading */
     font-family: 'Georgia', sans-serif;
 }
+
 
 header p {
     font-size: 1.2em;
