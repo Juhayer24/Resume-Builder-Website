@@ -11,10 +11,9 @@
     <header>
         <div class="container">
             <h1>Template 1 - Create Your Resume</h1>
-            <!--logo html -->
-      <a href="home.html">
-        <img src="../:images/logo.png" alt="Website Logo" class="logo">
-      </a>
+            <a href="home.html">
+                <img src="../:images/logo.png" alt="Website Logo" class="logo">
+            </a>
 
             <!-- Hamburger Menu -->
             <div class="hamburger-menu" onclick="toggleMenu()">
@@ -42,25 +41,68 @@
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
+            <label for="linkedin">LinkedIn URL:</label>
+            <input type="url" id="linkedin" name="linkedin">
 
-            <label for="summary">Professional Summary:</label>
-            <textarea id="summary" name="summary" rows="4" required></textarea>
+            <label for="github">GitHub URL:</label>
+            <input type="url" id="github" name="github">
 
-            <label for="experience">Work Experience:</label>
-            <textarea id="experience" name="experience" rows="4" required></textarea>
+            <h3>Education</h3>
+            <label for="university">University Name:</label>
+            <input type="text" id="university" name="university" required>
 
-            <label for="education">Education:</label>
-            <textarea id="education" name="education" rows="4" required></textarea>
+            <label for="location">University Location:</label>
+            <input type="text" id="location" name="location" required>
 
-            <label for="skills">Skills:</label>
-            <textarea id="skills" name="skills" rows="4" required></textarea>
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major" required>
+
+            <label for="gpa">GPA:</label>
+            <input type="text" id="gpa" name="gpa">
+
+            <label for="courses">Relevant Courses:</label>
+            <textarea id="courses" name="courses" rows="2"></textarea>
+
+            <label for="languagesTools">Programming Languages & Tools:</label>
+            <textarea id="languagesTools" name="languagesTools" rows="2"></textarea>
+
+            <label for="clubs">Clubs and Associations:</label>
+            <textarea id="clubs" name="clubs" rows="2"></textarea>
+
+            <h3>Projects</h3>
+            <label for="project1Name">Project 1 Name:</label>
+            <input type="text" id="project1Name" name="project1Name">
+
+            <label for="project1Description">Project 1 Description:</label>
+            <textarea id="project1Description" name="project1Description" rows="2"></textarea>
+
+            <label for="project2Name">Project 2 Name:</label>
+            <input type="text" id="project2Name" name="project2Name">
+
+            <label for="project2Description">Project 2 Description:</label>
+            <textarea id="project2Description" name="project2Description" rows="2"></textarea>
+
+            <h3>Job Experience</h3>
+            <label for="job1Position">Job 1 Position:</label>
+            <input type="text" id="job1Position" name="job1Position">
+
+            <label for="job1Description">Job 1 Description:</label>
+            <textarea id="job1Description" name="job1Description" rows="2"></textarea>
+
+            <label for="job2Position">Job 2 Position:</label>
+            <input type="text" id="job2Position" name="job2Position">
+
+            <label for="job2Description">Job 2 Description:</label>
+            <textarea id="job2Description" name="job2Description" rows="2"></textarea>
+
+            <h3>Languages</h3>
+            <label for="languages">Languages:</label>
+            <textarea id="languages" name="languages" rows="2"></textarea>
 
             <button type="submit" class="animate-button">Generate Resume</button>
         </form>
     </div>
-    
+
     <script src="../js/script.js"></script>
 </body>
 </html>
@@ -68,8 +110,6 @@
 <script>
     function toggleMenu() {
         var navMenu = document.getElementById('navMenu');
-        
-        // Toggle visibility and opacity
         if (navMenu.classList.contains('show')) {
             navMenu.classList.remove('show');
         } else {
